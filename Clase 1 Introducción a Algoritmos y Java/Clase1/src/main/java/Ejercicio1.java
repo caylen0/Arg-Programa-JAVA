@@ -17,7 +17,7 @@ public class Ejercicio1{
         
         int numero_inicio = 5;
         int numero_fin = 14;
-        Scanner pares_impares = new Scanner(System.in);
+        
 
         /*punto A: todos los numeros del 5 al 14 inclusive
         while (numero_inicio <= numero_fin){
@@ -34,15 +34,24 @@ public class Ejercicio1{
         }*/
 
         /*punto C: elegir entre mostrar impares o pares */
-        System.out.println("Desea mostrar numeros impares o pares?: ");
-        String respuesta_usuario = pares_impares.nextLine();
-        
-
-        if (respuesta_usuario == "pares"){
-            while (numero_inicio <= numero_fin){
+        Scanner pares_impares = new Scanner(System.in);
+        System.out.println("Ingrese 1 para mostrar los pares y 2 para los impares: ");
+        int respuesta_usuario;
+        respuesta_usuario = pares_impares.nextInt();
+        while (numero_inicio <= numero_fin){
+            if (respuesta_usuario == 1){
                 if (numero_inicio %2 == 0){
                     System.out.println(numero_inicio);
-                } else System.out.println(numero_inicio);
+                    
+                }
+                numero_inicio++;
+            }
+
+            if (respuesta_usuario == 1){
+                if (numero_inicio %2 != 0){
+                    System.out.println(numero_inicio);
+                    numero_inicio++;
+                }
             }
         }
 
