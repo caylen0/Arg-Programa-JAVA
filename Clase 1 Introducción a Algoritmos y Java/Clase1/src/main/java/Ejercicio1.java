@@ -39,20 +39,16 @@ public class Ejercicio1{
         int respuesta_usuario;
         respuesta_usuario = pares_impares.nextInt();
         while (numero_inicio <= numero_fin){
-            if (respuesta_usuario == 1){
-                if (numero_inicio %2 == 0){
-                    System.out.println(numero_inicio);
-                    
+            if (respuesta_usuario == 1 && numero_inicio %2 == 0){
+                    System.out.println(numero_inicio);                
                 }
-                numero_inicio++;
-            }
+            
 
-            if (respuesta_usuario == 1){
-                if (numero_inicio %2 != 0){
+            if (respuesta_usuario == 2 && numero_inicio %2 != 0){
                     System.out.println(numero_inicio);
-                    numero_inicio++;
                 }
-            }
+
+            numero_inicio++;
         }
 
 
